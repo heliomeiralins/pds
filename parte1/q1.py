@@ -43,3 +43,7 @@ def print_function_and_fft(x, X, t, f, label):
 print_function_and_fft(y, Y, t, f_space, 'y')
 print_function_and_fft(z, Z, t, f_space, 'z')
 print_function_and_fft(w, W, tw, f_spaceW, 'w')
+
+
+# O Spectrograma foi calulado no GNU Octave usando a função:
+# specgram(x, 256, 100, 500)
