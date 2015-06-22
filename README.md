@@ -92,3 +92,7 @@ Resulta em:
 ![color_blind](parte2/color_blind.bmp)
 
 É meio difícil explicar a motivação de tal transformação, mas devo dizer que foram várias tentativas até chegar nesta, que deixa bem evidente a distinção.
+
+Retirando a cor azul da jogada:
+
+![no_blue](parte2/no_blue.bmp)
