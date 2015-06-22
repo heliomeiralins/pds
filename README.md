@@ -77,3 +77,18 @@ Parte mais relevante do código:
 Não obtive muito sucesso com meus algoritmos, então apelei para o Tesseract, que é uma ferramenta para reconhecer textos em imagens. Bastou apenas remover os espaços e os '\n' ( usei expressões regulares). Número de caracteres: 211.
 
 TODO: explicar minhas tentativas
+
+### Questão 3
+
+Analisando as componentes RGB da imagem separadamente( e em tons de cinza), notei que o número fica evidente ao comparar
+as imagens das componentes R e G ( passando de uma para outra, como em um slideshow). Comparar a componente azul com qualquer uma das outras duas não deixou o número evidente para mim.
+Assim, decidi trocar as componentes vermelhas e verdes assim:
+
+    cb[:, :, 0] = 255 / 2 + (dalton[:, :, 0] - dalton[:, :, 1])
+    cb[:, :, 1] = 255 / 2 + (dalton[:, :, 1] - dalton[:, :, 0])
+
+Resulta em:
+
+![color_blind](parte2/color_blind.bmp)
+
+É meio difícil explicar a motivação de tal transformação, mas devo dizer que foram várias tentativas até chegar nesta, que deixa bem evidente a distinção.
