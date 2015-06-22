@@ -12,7 +12,7 @@ Todo o projeto foi feito usando ferramentas opensource. Seguem as ferramentas us
 * Numpy
 * Scypy
 * Matplotlib
-* Tesseract-ocr
+* Tesseract-ocr ( pytesseract)
 * Octave
 
 ##Parte 1
@@ -118,3 +118,31 @@ Frames:
 ![inter_102](parte3/inter_102.bmp)
 ![inter_110](parte3/inter_110.bmp)
 ![inter_118](parte3/inter_118.bmp)
+
+## Parte 4
+
+### Questão 1
+
+Código: parte4/q1.py
+
+Analisamos os sinais nos domínios do tempo e da frequência:
+
+![freq](parte4/q1freq.png)
+
+![time](parte4/q1time.png)
+
+Percebemos que há atrasos e perdas.
+
+### Questão 2
+
+Código: parte4/q2.py
+
+Taxa de Amostragem: 8kHz
+
+![freq](parte4/q2freq.png)
+
+![time](parte4/q2time.png)
+
+Primeiramente, removi o ruído zerando uma banda de frequência na transformada de fourier, e depois tirando a transformada inversa. Só pra checar mesmo.
+
+Apliquei um Filtro Fir ( janela de kaiser, width=1/fs, ripple_db = 11). Os coeficientes foram divididos por 10000 para diminuir o ruído. O resultado foi bastante satisfatório. Brinquei com vários valores de filtros de Kaiser e obtive resultados satisfatórios. Não consegui obter bons resultados com filtros de Chebyshev.
