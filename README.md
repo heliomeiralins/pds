@@ -53,8 +53,11 @@ Isso acontece pois o espectrograma faz transformadas de fourier em subintervalos
 ## Parte2
 
 ### Questão 1
+
+Código: parte2/q1.py
+
 A maneira mais simples de resolver o problema dos Ringings é aplicando um filtro passa baixa.
-Apliquei um filtro gaussiano com sigma 1.5. Segue o resultado:
+Apliquei um filtro gaussiano (do scipy) com sigma 1.5. Segue o resultado:
 
 ![gaussian](parte2/gaussian.bmp)
 
