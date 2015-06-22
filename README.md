@@ -69,7 +69,13 @@ Parte mais relevante do código:
 
 Não obtive muito sucesso com meus algoritmos, então apelei para o Tesseract, que é uma ferramenta para reconhecer textos em imagens. Bastou apenas remover os espaços e os \n ( usei expressões regulares). Número de caracteres: 211.
 
-TODO: explicar minhas tentativas
+Minha implementação está no arquivo parte2/alternativeq2.py.
+Basicamente, eu aplico uma transformação na imagem para eliminar os ruídos da imagem e separo em regiões que são mais escuras que a média da imagem. Infelizmente, algumas letras estão muito próximas e são consideradas juntas. Da mesma maneira, temos problemas com ruídos e devemos filtrar as regiões que são muito pequenas.
+
+Obtive um resultado de 199 para regiões com tamanho maior que 5 pixels, e 197 para regiões com mais de 10.
+Não é muito relevante, mas regiões maiores que 2 pixels dá 211! Mesma resposta do outro algoritmo.
+
+Obtive resultados melhores trocando a condição de ser mais escuro que a média por valores fixos, mas deixei dessa maneira para funcionar com mais imagens.
 
 ### Questão 3
 
