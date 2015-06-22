@@ -49,3 +49,14 @@ usei o GNU Octave. Seguem os comandos:
 
 Agora vemos as componentes de frequência pelo tempo, o que não era claro na transformada de fourier.
 Isso acontece pois o espectrograma faz transformadas de fourier em subintervalos.
+
+## Parte2
+
+### Questão 1
+A maneira mais simples de resolver o problema dos Ringings é aplicando um filtro passa baixa.
+Apliquei um filtro gaussiano com sigma 1.5. Segue o resultado:
+
+![gaussian](parte2/gaussian.bmp)
+
+A desvantagem do filtro gaussiano é que ele embaça bastante a foto. Provavelmente, pode-se obter
+um resultado melhor usando filtro sinc. fonte: [https://en.wikipedia.org/wiki/Ringing_artifacts#Causes](https://en.wikipedia.org/wiki/Ringing_artifacts#Causes)
