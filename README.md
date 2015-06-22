@@ -63,3 +63,11 @@ Apliquei um filtro gaussiano (do scipy) com sigma 1.5. Segue o resultado:
 
 A desvantagem do filtro gaussiano é que ele embaça bastante a foto. Provavelmente, pode-se obter
 um resultado melhor usando filtro sinc. fonte: [https://en.wikipedia.org/wiki/Ringing_artifacts#Causes](https://en.wikipedia.org/wiki/Ringing_artifacts#Causes)
+
+### Questão 2
+
+Código: parte2/q2.py
+
+Não obtive muito sucesso com meus algoritmos, então apelei para o Tesseract, que é uma ferramenta para reconhecer textos em imagens.
+
+TODO: explicar minhas tentativas
