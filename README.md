@@ -102,3 +102,19 @@ multiplica a diferença das componentes R e G, ou deixando o vermelho mais claro
 Retirando a cor azul da jogada:
 
 ![no_blue](parte2/no_blue.bmp)
+
+## Parte 3
+
+Código: parte3/parte3.py
+
+Na parte 3, tomei a solução mais simples possível. Simplesmente:
+
+    imsave('inter_102.bmp', img101 / 2 + img103 / 2)
+    imsave('inter_110.bmp', img109 / 2 + img111 / 2)
+    imsave('inter_118.bmp', img117 / 2 + img119 / 2)
+
+Frames:
+
+![inter_102](parte3/inter_102.bmp)
+![inter_110](parte3/inter_110.bmp)
+![inter_118](parte3/inter_118.bmp)
