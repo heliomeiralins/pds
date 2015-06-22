@@ -22,11 +22,11 @@ for a in [0.5, 0.9, 0.25]:
 
     tf = (num, den, 1 / f)
     _, y = signal.dlsim(tf, echoes, t=t)
-    wavfile.write('q2_reverb_{0:.2f}.wav'.format(a), f, y)
+    wavfile.write('q2_minus_{0:.2f}.wav'.format(a), f, y)
 
 for a in [0.5, 0.9, 0.25]:
     den[-1] = a
 
     tf = (num, den, 1 / f)
     _, y = signal.dlsim(tf, echoes, t=t)
-    wavfile.write('q2_echoes_treated_{0:.2f}.wav'.format(a), f, y)
+    wavfile.write('q2_plus_{0:.2f}.wav'.format(a), f, y)
