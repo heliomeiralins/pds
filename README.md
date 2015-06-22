@@ -91,7 +91,13 @@ Resulta em:
 
 ![color_blind](parte2/color_blind.bmp)
 
-É meio difícil explicar a motivação de tal transformação, mas devo dizer que foram várias tentativas até chegar nesta, que deixa bem evidente a distinção.
+É meio difícil explicar a motivação de tal transformação, mas devo dizer que foram várias tentativas até chegar
+nesta, que deixa bem evidente a distinção. Também é possível obter resultados ainda melhores aumentado o fator que
+multiplica a diferença das componentes R e G, ou deixando o vermelho mais claro e o verde mais escuro. Exemplo:
+
+    cb[:, :, 0] = 3*255 / 4 + (dalton[:, :, 0] - dalton[:, :, 1])
+    cb[:, :, 1] = 255 / 4 + (dalton[:, :, 1] - dalton[:, :, 0])
+
 
 Retirando a cor azul da jogada:
 
