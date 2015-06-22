@@ -67,7 +67,13 @@ um resultado melhor usando filtro sinc. fonte: [https://en.wikipedia.org/wiki/Ri
 ### Questão 2
 
 Código: parte2/q2.py
+Parte mais relevante do código:
 
-Não obtive muito sucesso com meus algoritmos, então apelei para o Tesseract, que é uma ferramenta para reconhecer textos em imagens.
+    text = pytesseract.image_to_string(img)
+    without_spaces = re.sub('\s+', '', text)
+
+    print(len(without_spaces))
+
+Não obtive muito sucesso com meus algoritmos, então apelei para o Tesseract, que é uma ferramenta para reconhecer textos em imagens. Bastou apenas remover os espaços e os '\n' ( usei expressões regulares). Número de caracteres: 211.
 
 TODO: explicar minhas tentativas
